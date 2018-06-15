@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  "name": "Highlight Jenkins Tabs",
+  "version": "1.0",
+  "description": "Highlights your test suite tabs in Jenkins",
+
+  "icons": {
+    "32": "icons/green.png"
+  },
+
+  "content_scripts": [
+    {
+      /* Change the matcher to match your jenkins instance */
+      "matches": ["https://jenkins/*"],
+      "js": ["jenkins.js"]
+    }
+  ],
+
+  "options_ui": {
+    "page": "settings/options.html"
+  },
+
+  "permissions": [
+    "storage"
+  ],
+
+  "applications": {
+    "gecko": {
+      "id": "me@example.com"
+    }
+  }
+}
